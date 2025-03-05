@@ -1,0 +1,20 @@
+name: Ant Build 
+on:
+  pull_request:
+    branches:
+          - develop  
+          - qa_split
+  push:
+    paths-ignore:     
+      - '.github/**'
+      - '*.md'
+    branches: 
+      - develop
+      - qa_split
+      - qa
+      - main
+      - drp
+jobs:
+  cicd:
+    uses: monex-sistemas/cicd/.github/workflows/ant.yml@v1.0.1    
+    secrets: inherit
