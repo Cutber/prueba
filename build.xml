@@ -1,0 +1,5 @@
+<project name="MiProyecto" default="compilar">
+    <target name="compilar">
+        <echo message="Construcción exitosa con Ant"/>
+    </target>
+</project>
