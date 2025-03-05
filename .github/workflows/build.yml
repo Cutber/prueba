@@ -18,5 +18,20 @@ on:
 
 jobs:
   cicd:
-    uses: monex-sistemas/cicd/.github/workflows/ant.yml@v1.0.1    
-    secrets: inherit
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v4
+
+          - name: Configurar Java
+            uses: actions/setup-java@v3
+            with:
+             distribution: 'temurin'
+             java-version: '17'
+
+          - name: Construir con Ant
+            run: |
+             sudo apt update
+             sudo apt install -y ant
+             ant -version
+             ant build
