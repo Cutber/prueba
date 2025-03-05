@@ -17,5 +17,5 @@ on:
       - drp
 jobs:
   cicd:
-    uses: monex-sistemas/cicd/.github/workflows/ant.yml@v1.0.1    
+    uses: ./.github/workflows/ant.yml    
     secrets: inherit
