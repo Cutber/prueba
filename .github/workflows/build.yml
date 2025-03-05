@@ -1,10 +1,9 @@
 name: Ant Build 
 on:
-  workflow_dispatch: 
   pull_request:
     branches:
-          - develop  
-          - qa_split
+      - develop  
+      - qa_split
   push:
     paths-ignore:     
       - '.github/**'
